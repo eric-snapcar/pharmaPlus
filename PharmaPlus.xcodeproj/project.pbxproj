@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07C54E1420758A0300D60EE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E1320758A0300D60EE9 /* AppDelegate.swift */; };
-		07C54E1620758A0300D60EE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E1520758A0300D60EE9 /* ViewController.swift */; };
+		07C54E1620758A0300D60EE9 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E1520758A0300D60EE9 /* RootController.swift */; };
 		07C54E1B20758A0300D60EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E1A20758A0300D60EE9 /* Assets.xcassets */; };
 		07C54E2920758A0400D60EE9 /* PharmaPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E2820758A0400D60EE9 /* PharmaPlusTests.swift */; };
 		07C54E3420758A0400D60EE9 /* PharmaPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E3320758A0400D60EE9 /* PharmaPlusUITests.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		07C54E1020758A0300D60EE9 /* PharmaPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharmaPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C54E1320758A0300D60EE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07C54E1520758A0300D60EE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07C54E1520758A0300D60EE9 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		07C54E1A20758A0300D60EE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C54E1F20758A0300D60EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C54E2420758A0400D60EE9 /* PharmaPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PharmaPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,11 +95,8 @@
 		07C54E1220758A0300D60EE9 /* PharmaPlus */ = {
 			isa = PBXGroup;
 			children = (
-				07C54E1320758A0300D60EE9 /* AppDelegate.swift */,
-				07C54E1520758A0300D60EE9 /* ViewController.swift */,
-				07C54E1A20758A0300D60EE9 /* Assets.xcassets */,
-				07C54E1F20758A0300D60EE9 /* Info.plist */,
-				07C54E4120758B6400D60EE9 /* LaunchScreen.xib */,
+				07C54E4420758D8000D60EE9 /* Controller */,
+				07C54E4320758D6B00D60EE9 /* Other */,
 			);
 			path = PharmaPlus;
 			sourceTree = "<group>";
@@ -120,6 +117,25 @@
 				07C54E3520758A0400D60EE9 /* Info.plist */,
 			);
 			path = PharmaPlusUITests;
+			sourceTree = "<group>";
+		};
+		07C54E4320758D6B00D60EE9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				07C54E1320758A0300D60EE9 /* AppDelegate.swift */,
+				07C54E1A20758A0300D60EE9 /* Assets.xcassets */,
+				07C54E1F20758A0300D60EE9 /* Info.plist */,
+				07C54E4120758B6400D60EE9 /* LaunchScreen.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		07C54E4420758D8000D60EE9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07C54E1520758A0300D60EE9 /* RootController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07C54E1620758A0300D60EE9 /* ViewController.swift in Sources */,
+				07C54E1620758A0300D60EE9 /* RootController.swift in Sources */,
 				07C54E1420758A0300D60EE9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
