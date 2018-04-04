@@ -13,6 +13,7 @@
 		07C54E2920758A0400D60EE9 /* PharmaPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E2820758A0400D60EE9 /* PharmaPlusTests.swift */; };
 		07C54E3420758A0400D60EE9 /* PharmaPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E3320758A0400D60EE9 /* PharmaPlusUITests.swift */; };
 		07C54E4220758B6400D60EE9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E4120758B6400D60EE9 /* LaunchScreen.xib */; };
+		07C54E4620758DBE00D60EE9 /* RootController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E4520758DBE00D60EE9 /* RootController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		07C54E3320758A0400D60EE9 /* PharmaPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PharmaPlusUITests.swift; sourceTree = "<group>"; };
 		07C54E3520758A0400D60EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C54E4120758B6400D60EE9 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		07C54E4520758DBE00D60EE9 /* RootController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				07C54E4420758D8000D60EE9 /* Controller */,
 				07C54E4320758D6B00D60EE9 /* Other */,
+				07C54E1F20758A0300D60EE9 /* Info.plist */,
 			);
 			path = PharmaPlus;
 			sourceTree = "<group>";
@@ -124,7 +127,6 @@
 			children = (
 				07C54E1320758A0300D60EE9 /* AppDelegate.swift */,
 				07C54E1A20758A0300D60EE9 /* Assets.xcassets */,
-				07C54E1F20758A0300D60EE9 /* Info.plist */,
 				07C54E4120758B6400D60EE9 /* LaunchScreen.xib */,
 			);
 			path = Other;
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				07C54E1520758A0300D60EE9 /* RootController.swift */,
+				07C54E4520758DBE00D60EE9 /* RootController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C54E4220758B6400D60EE9 /* LaunchScreen.xib in Resources */,
+				07C54E4620758DBE00D60EE9 /* RootController.xib in Resources */,
 				07C54E1B20758A0300D60EE9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
