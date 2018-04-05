@@ -14,6 +14,10 @@
 		07C54E3420758A0400D60EE9 /* PharmaPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C54E3320758A0400D60EE9 /* PharmaPlusUITests.swift */; };
 		07C54E4220758B6400D60EE9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E4120758B6400D60EE9 /* LaunchScreen.xib */; };
 		07C54E4620758DBE00D60EE9 /* RootController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E4520758DBE00D60EE9 /* RootController.xib */; };
+		07C54E482076452200D60EE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07C54E472076452200D60EE9 /* GoogleService-Info.plist */; };
+		106B6AF739F9DDA9320A4873 /* Pods_PharmaPlusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F998DF4B32443C54C84B77E /* Pods_PharmaPlusUITests.framework */; };
+		27AADF68F06D3E09EAFC956B /* Pods_PharmaPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A57318C097AC596774FDD8 /* Pods_PharmaPlus.framework */; };
+		4FF7497FE8E21ECBBBC8B2F0 /* Pods_PharmaPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C91F5DE918C3C92F96B41B /* Pods_PharmaPlusTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03D897F6B9E07359C304A9EF /* Pods-PharmaPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus.release.xcconfig"; sourceTree = "<group>"; };
 		07C54E1020758A0300D60EE9 /* PharmaPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharmaPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C54E1320758A0300D60EE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C54E1520758A0300D60EE9 /* RootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,16 @@
 		07C54E3520758A0400D60EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C54E4120758B6400D60EE9 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		07C54E4520758DBE00D60EE9 /* RootController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootController.xib; sourceTree = "<group>"; };
+		07C54E472076452200D60EE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07C54E492076452500D60EE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33A57318C097AC596774FDD8 /* Pods_PharmaPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharmaPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAABADB69AC2D67D5F1385A /* Pods-PharmaPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlusTests/Pods-PharmaPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F998DF4B32443C54C84B77E /* Pods_PharmaPlusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharmaPlusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		702A327650AD39F27B8B9CB2 /* Pods-PharmaPlusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlusUITests/Pods-PharmaPlusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		74486C67AB0420AB9C199DFF /* Pods-PharmaPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlusTests/Pods-PharmaPlusTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2C91F5DE918C3C92F96B41B /* Pods_PharmaPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharmaPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDB998115EC65B68A07AF0E2 /* Pods-PharmaPlusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlusUITests/Pods-PharmaPlusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E6AD48016DA48DA7CA618002 /* Pods-PharmaPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AADF68F06D3E09EAFC956B /* Pods_PharmaPlus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF7497FE8E21ECBBBC8B2F0 /* Pods_PharmaPlusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106B6AF739F9DDA9320A4873 /* Pods_PharmaPlusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +99,8 @@
 				07C54E2720758A0400D60EE9 /* PharmaPlusTests */,
 				07C54E3220758A0400D60EE9 /* PharmaPlusUITests */,
 				07C54E1120758A0300D60EE9 /* Products */,
+				C30AAE55E96FF3322E5DD1D4 /* Pods */,
+				F51818D4C9884528A7D67E19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +120,7 @@
 				07C54E4420758D8000D60EE9 /* Controller */,
 				07C54E4320758D6B00D60EE9 /* Other */,
 				07C54E1F20758A0300D60EE9 /* Info.plist */,
+				07C54E492076452500D60EE9 /* GoogleService-Info.plist */,
 			);
 			path = PharmaPlus;
 			sourceTree = "<group>";
@@ -125,6 +146,7 @@
 		07C54E4320758D6B00D60EE9 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				07C54E472076452200D60EE9 /* GoogleService-Info.plist */,
 				07C54E1320758A0300D60EE9 /* AppDelegate.swift */,
 				07C54E1A20758A0300D60EE9 /* Assets.xcassets */,
 				07C54E4120758B6400D60EE9 /* LaunchScreen.xib */,
@@ -141,6 +163,29 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C30AAE55E96FF3322E5DD1D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6AD48016DA48DA7CA618002 /* Pods-PharmaPlus.debug.xcconfig */,
+				03D897F6B9E07359C304A9EF /* Pods-PharmaPlus.release.xcconfig */,
+				3DAABADB69AC2D67D5F1385A /* Pods-PharmaPlusTests.debug.xcconfig */,
+				74486C67AB0420AB9C199DFF /* Pods-PharmaPlusTests.release.xcconfig */,
+				702A327650AD39F27B8B9CB2 /* Pods-PharmaPlusUITests.debug.xcconfig */,
+				DDB998115EC65B68A07AF0E2 /* Pods-PharmaPlusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F51818D4C9884528A7D67E19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33A57318C097AC596774FDD8 /* Pods_PharmaPlus.framework */,
+				D2C91F5DE918C3C92F96B41B /* Pods_PharmaPlusTests.framework */,
+				3F998DF4B32443C54C84B77E /* Pods_PharmaPlusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07C54E3820758A0400D60EE9 /* Build configuration list for PBXNativeTarget "PharmaPlus" */;
 			buildPhases = (
+				5F9D41BC7234930A18DEEA0A /* [CP] Check Pods Manifest.lock */,
 				07C54E0C20758A0300D60EE9 /* Sources */,
 				07C54E0D20758A0300D60EE9 /* Frameworks */,
 				07C54E0E20758A0300D60EE9 /* Resources */,
+				5DF56CFBE0F4027F3286ABDF /* [CP] Embed Pods Frameworks */,
+				E17BFA89751EE46BDFB4D309 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07C54E3B20758A0400D60EE9 /* Build configuration list for PBXNativeTarget "PharmaPlusTests" */;
 			buildPhases = (
+				11098B42B7D3BD26329982F8 /* [CP] Check Pods Manifest.lock */,
 				07C54E2020758A0400D60EE9 /* Sources */,
 				07C54E2120758A0400D60EE9 /* Frameworks */,
 				07C54E2220758A0400D60EE9 /* Resources */,
+				4CD8BB0ABA9BF0529359959A /* [CP] Embed Pods Frameworks */,
+				8353D7D7DD5CE5C66A1C0367 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07C54E3E20758A0400D60EE9 /* Build configuration list for PBXNativeTarget "PharmaPlusUITests" */;
 			buildPhases = (
+				6A4E66329912B76307BF3647 /* [CP] Check Pods Manifest.lock */,
 				07C54E2B20758A0400D60EE9 /* Sources */,
 				07C54E2C20758A0400D60EE9 /* Frameworks */,
 				07C54E2D20758A0400D60EE9 /* Resources */,
+				A29BD3049223D35307DC3F60 /* [CP] Embed Pods Frameworks */,
+				B090951650BBBB507C9EE114 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07C54E4220758B6400D60EE9 /* LaunchScreen.xib in Resources */,
+				07C54E482076452200D60EE9 /* GoogleService-Info.plist in Resources */,
 				07C54E4620758DBE00D60EE9 /* RootController.xib in Resources */,
 				07C54E1B20758A0300D60EE9 /* Assets.xcassets in Resources */,
 			);
@@ -269,6 +324,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11098B42B7D3BD26329982F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PharmaPlusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CD8BB0ABA9BF0529359959A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlusTests/Pods-PharmaPlusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DF56CFBE0F4027F3286ABDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F9D41BC7234930A18DEEA0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PharmaPlus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A4E66329912B76307BF3647 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PharmaPlusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8353D7D7DD5CE5C66A1C0367 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlusTests/Pods-PharmaPlusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A29BD3049223D35307DC3F60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlusUITests/Pods-PharmaPlusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B090951650BBBB507C9EE114 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlusUITests/Pods-PharmaPlusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E17BFA89751EE46BDFB4D309 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07C54E0C20758A0300D60EE9 /* Sources */ = {
@@ -421,6 +628,7 @@
 		};
 		07C54E3920758A0400D60EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6AD48016DA48DA7CA618002 /* Pods-PharmaPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +644,7 @@
 		};
 		07C54E3A20758A0400D60EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03D897F6B9E07359C304A9EF /* Pods-PharmaPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +660,7 @@
 		};
 		07C54E3C20758A0400D60EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAABADB69AC2D67D5F1385A /* Pods-PharmaPlusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +678,7 @@
 		};
 		07C54E3D20758A0400D60EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74486C67AB0420AB9C199DFF /* Pods-PharmaPlusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +696,7 @@
 		};
 		07C54E3F20758A0400D60EE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 702A327650AD39F27B8B9CB2 /* Pods-PharmaPlusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -501,6 +713,7 @@
 		};
 		07C54E4020758A0400D60EE9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDB998115EC65B68A07AF0E2 /* Pods-PharmaPlusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
