@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 class RootController: UIViewController {
     var loginController = LoginController()
+    var mainController = MainController()
     override func viewDidLoad() {
         super.viewDidLoad()
         var ref: DatabaseReference!
