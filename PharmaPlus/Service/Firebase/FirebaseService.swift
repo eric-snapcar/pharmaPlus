@@ -8,7 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
-class ReferenceService {
+class FirebaseService {
     class func reference() -> DatabaseReference{
         return Database.database().reference();
     }

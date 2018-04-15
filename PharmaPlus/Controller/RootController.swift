@@ -13,9 +13,14 @@ class RootController: UIViewController {
     var mainController = MainController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        var ref: DatabaseReference!
-        ref = ReferenceService.reference()
-
+        let ref = FirebaseService.reference()
+        let userId = "eric_hong_2000@yahoo.fr"
+        ref.child("users").child(userId).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            print(value as Any)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         if(CacheService.authOk()){

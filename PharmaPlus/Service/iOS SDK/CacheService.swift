@@ -12,3 +12,5 @@ class CacheService {
         return true;
     }
 }
+// CACHE EMAIL
+// CACHE PHOTO POST ID
