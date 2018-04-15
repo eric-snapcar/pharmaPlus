@@ -18,8 +18,12 @@ class RootController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.present(mainController, animated: false) {
-            
+        if(CacheService.authOk()){
+            self.present(mainController, animated: false) {
+            }
+        }else{
+            self.present(loginController, animated: false) {
+            }
         }
     }
     override func didReceiveMemoryWarning() {

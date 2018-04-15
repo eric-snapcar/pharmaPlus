@@ -8,5 +8,7 @@
 
 import Foundation
 class CacheService {
-    
+    class func authOk() -> Bool{
+        return true;
+    }
 }
