@@ -13,3 +13,20 @@ class FirebaseService {
         return Database.database().reference();
     }
 }
+
+extension DatabaseReference {
+    func checkIfUserExist( email : String, completion: @escaping ( _ userExists: Bool ) -> Void ) -> Void {
+        let ref = FirebaseService.reference()
+        let usersRef = ref.child("users")
+        let email = "eric_hong_2000@yahoo.fr"
+        usersRef.queryOrdered(byChild: "email").queryEqual(toValue: email).observe(.value) { (snapshot) in
+            if(snapshot.value != nil){
+                completion(true)
+            }
+            else {
+                completion(false)
+            }
+        }
+    }
+    
+}
