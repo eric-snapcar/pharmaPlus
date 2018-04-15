@@ -20,7 +20,7 @@ extension DatabaseReference {
         let usersRef = ref.child("users")
         let email = "eric_hong_2000@yahoo.fr"
         usersRef.queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of: .value, with: { (snapshot) in
-            if(snapshot.value != nil){
+            if(snapshot.exists()){
                 completion(true)
             }
             else {
