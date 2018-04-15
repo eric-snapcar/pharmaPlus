@@ -9,13 +9,21 @@
 import UIKit
 import FirebaseDatabase
 class RootController: UIViewController {
+    var loginController = LoginController()
     override func viewDidLoad() {
         super.viewDidLoad()
         var ref: DatabaseReference!
         ref = Database.database().reference()
+
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        self.present(loginController, animated: false) {
+            
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
 }
 
