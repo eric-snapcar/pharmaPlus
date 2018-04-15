@@ -18,7 +18,7 @@ class RootController: UIViewController {
 
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.present(loginController, animated: false) {
+        self.present(mainController, animated: false) {
             
         }
     }
