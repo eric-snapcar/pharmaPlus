@@ -14,7 +14,7 @@ class RootController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var ref: DatabaseReference!
-        ref = Database.database().reference()
+        ref = ReferenceService.reference()
 
     }
     override func viewDidAppear(_ animated: Bool) {

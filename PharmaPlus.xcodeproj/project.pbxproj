@@ -20,6 +20,7 @@
 		07F5F1132083AF3300902DEC /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5F1122083AF3300902DEC /* MainController.swift */; };
 		07F5F1152083AF4100902DEC /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F5F1142083AF4100902DEC /* MainController.xib */; };
 		07F5F1172083B3A900902DEC /* CacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5F1162083B3A900902DEC /* CacheService.swift */; };
+		07F5F11C2083B7B400902DEC /* ReferenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5F11B2083B7B400902DEC /* ReferenceService.swift */; };
 		106B6AF739F9DDA9320A4873 /* Pods_PharmaPlusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F998DF4B32443C54C84B77E /* Pods_PharmaPlusUITests.framework */; };
 		27AADF68F06D3E09EAFC956B /* Pods_PharmaPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33A57318C097AC596774FDD8 /* Pods_PharmaPlus.framework */; };
 		4FF7497FE8E21ECBBBC8B2F0 /* Pods_PharmaPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C91F5DE918C3C92F96B41B /* Pods_PharmaPlusTests.framework */; };
@@ -64,6 +65,7 @@
 		07F5F1122083AF3300902DEC /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		07F5F1142083AF4100902DEC /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 		07F5F1162083B3A900902DEC /* CacheService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheService.swift; sourceTree = "<group>"; };
+		07F5F11B2083B7B400902DEC /* ReferenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceService.swift; sourceTree = "<group>"; };
 		33A57318C097AC596774FDD8 /* Pods_PharmaPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharmaPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DAABADB69AC2D67D5F1385A /* Pods-PharmaPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlusTests/Pods-PharmaPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3F998DF4B32443C54C84B77E /* Pods_PharmaPlusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharmaPlusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 		07F5F1182083B3B300902DEC /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				07F5F11A2083B7A400902DEC /* Firebase */,
 				07F5F1192083B3B900902DEC /* iOS SDK */,
 			);
 			path = Service;
@@ -192,6 +195,14 @@
 				07F5F1162083B3A900902DEC /* CacheService.swift */,
 			);
 			path = "iOS SDK";
+			sourceTree = "<group>";
+		};
+		07F5F11A2083B7A400902DEC /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				07F5F11B2083B7B400902DEC /* ReferenceService.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		C30AAE55E96FF3322E5DD1D4 /* Pods */ = {
@@ -520,6 +531,7 @@
 				07F5F1132083AF3300902DEC /* MainController.swift in Sources */,
 				07C54E1620758A0300D60EE9 /* RootController.swift in Sources */,
 				07F5F10F2083AA3600902DEC /* LoginController.swift in Sources */,
+				07F5F11C2083B7B400902DEC /* ReferenceService.swift in Sources */,
 				07C54E1420758A0300D60EE9 /* AppDelegate.swift in Sources */,
 				07F5F1172083B3A900902DEC /* CacheService.swift in Sources */,
 			);
