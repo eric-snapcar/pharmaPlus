@@ -8,5 +8,12 @@
 
 import UIKit
 class LoginController : UIViewController {
+    // MARK: @IBOutle
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBAction func onTapLoginButton(_ sender: Any) {
+        print("onTapLoginButton")
+        print(emailTextField.text)
+    }
     
 }
