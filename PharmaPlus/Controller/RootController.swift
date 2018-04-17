@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import CoreLocation
 import FirebaseDatabase
-class RootController: UIViewController {
+class RootController: UIViewController , CLLocationManagerDelegate{
+    // MARK: private var
     var loginController = LoginController()
     var mainController = MainController()
+    var locationManager = CLLocationManager()
+    // MARK: UIViewController override
     override func viewDidLoad() {
         super.viewDidLoad()
         // TEST FIREBASE
@@ -20,6 +24,15 @@ class RootController: UIViewController {
             print(exists)
         }
         // END
+       print("CLLocationManager.locationServicesEnabled()")
+       print(CLLocationManager.locationServicesEnabled())
+    if(CLLocationManager.locationServicesEnabled()){
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+        locationManager.distanceFilter = 500
+    }
+
     }
     override func viewDidAppear(_ animated: Bool) {
         if(CacheService.authOk()){
