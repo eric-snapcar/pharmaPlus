@@ -14,6 +14,11 @@ class RootController: UIViewController , CLLocationManagerDelegate{
     var loginController = LoginController()
     var mainController = MainController()
     var locationManager = CLLocationManager()
+    // MARK: CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+         print("locationManager()")
+        print(locations)
+    }
     // MARK: UIViewController override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +31,13 @@ class RootController: UIViewController , CLLocationManagerDelegate{
         // END
        print("CLLocationManager.locationServicesEnabled()")
        print(CLLocationManager.locationServicesEnabled())
+        print(CLLocationManager.authorizationStatus().rawValue)
     if(CLLocationManager.locationServicesEnabled()){
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
         locationManager.distanceFilter = 500
+         print("Test")
     }
 
     }
