@@ -32,6 +32,7 @@ class RootController: UIViewController , CLLocationManagerDelegate{
        print("CLLocationManager.locationServicesEnabled()")
        print(CLLocationManager.locationServicesEnabled())
         print(CLLocationManager.authorizationStatus().rawValue)
+        locationManager.requestWhenInUseAuthorization()
     if(CLLocationManager.locationServicesEnabled()){
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
