@@ -16,8 +16,9 @@ class RootController: UIViewController , CLLocationManagerDelegate{
     var locationManager = CLLocationManager()
     // MARK: CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-         print("locationManager()")
-        print(locations)
+        for location in locations{
+            FirebaseService.reference().addLocation(location:location);
+        }
     }
     // MARK: UIViewController override
     override func viewDidLoad() {
@@ -29,17 +30,16 @@ class RootController: UIViewController , CLLocationManagerDelegate{
             print(exists)
         }
         // END
-       print("CLLocationManager.locationServicesEnabled()")
-       print(CLLocationManager.locationServicesEnabled())
+        print("CLLocationManager.locationServicesEnabled()")
+        print(CLLocationManager.locationServicesEnabled())
         print(CLLocationManager.authorizationStatus().rawValue)
-        locationManager.requestWhenInUseAuthorization()
-    if(CLLocationManager.locationServicesEnabled()){
-        locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
-        locationManager.distanceFilter = 500
-         print("Test")
-    }
+        locationManager.requestAlwaysAuthorization()
+        if(CLLocationManager.locationServicesEnabled()){
+            locationManager.delegate = self
+            locationManager.startUpdatingLocation()
+            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            locationManager.distanceFilter = 500
+        }
 
     }
     override func viewDidAppear(_ animated: Bool) {
