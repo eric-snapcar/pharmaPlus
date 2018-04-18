@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
     fileprivate var imagePicker = UIImagePickerController()
@@ -35,4 +36,19 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         dismiss(animated: true) {
         }
     }
+    // MARK: private
+    /*
+    func saveImage( filepath: String, image : UIImage, _ completion: @escaping (_ metadata_: FIRStorageMetadata?,_ error_: Error?)->Void){
+        var data = Data()
+        data = UIImageJPEGRepresentation(image, 0.8)!
+        // set upload path
+        let metaData = FIRStorageMetadata()
+        metaData.contentType = "image/jpg"
+        let storage = FIRStorage.storage()
+        let storageRef = storage.reference()
+        storageRef.child(filepath).put(data, metadata: metaData) { (metaData, error) in
+            completion(metaData, error)
+        }
+    }
+     */
 }
