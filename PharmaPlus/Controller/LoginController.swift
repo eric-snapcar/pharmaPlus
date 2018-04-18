@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FirebaseStorage
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
     fileprivate var imagePicker = UIImagePickerController()
@@ -37,18 +37,18 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
     }
     // MARK: private
-    /*
-    func saveImage( filepath: String, image : UIImage, _ completion: @escaping (_ metadata_: FIRStorageMetadata?,_ error_: Error?)->Void){
+ 
+    func saveImage( filepath: String, image : UIImage ){
         var data = Data()
         data = UIImageJPEGRepresentation(image, 0.8)!
-        // set upload path
-        let metaData = FIRStorageMetadata()
-        metaData.contentType = "image/jpg"
-        let storage = FIRStorage.storage()
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        let storage = Storage.storage()
         let storageRef = storage.reference()
-        storageRef.child(filepath).put(data, metadata: metaData) { (metaData, error) in
-            completion(metaData, error)
+        let imageStorageRef = storageRef.child("image")
+        imageStorageRef.putData(data, metadata: metadata) { (metaData, error) in
+ 
         }
     }
-     */
+ 
 }
