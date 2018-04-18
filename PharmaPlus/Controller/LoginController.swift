@@ -14,8 +14,9 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func onTapLoginButton(_ sender: Any) {
-        print("onTapLoginButton")
-        print(emailTextField.text)
+        present(imagePicker, animated: true) {
+            
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
