@@ -32,6 +32,8 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            saveImage(filepath: "test", image: image)
+            print("Save image")
         }
         dismiss(animated: true) {
         }
@@ -47,7 +49,8 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         let storageRef = storage.reference()
         let imageStorageRef = storageRef.child("image")
         imageStorageRef.putData(data, metadata: metadata) { (metaData, error) in
- 
+            print(metaData)
+            print(error)
         }
     }
  
