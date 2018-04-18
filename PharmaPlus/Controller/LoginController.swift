@@ -7,7 +7,9 @@
 //
 
 import UIKit
-class LoginController : UIViewController {
+class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    // MARK: fileprivate
+    fileprivate var imagePicker = UIImagePickerController()
     // MARK: @IBOutle
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -15,5 +17,21 @@ class LoginController : UIViewController {
         print("onTapLoginButton")
         print(emailTextField.text)
     }
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.sourceType = .camera
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+    }
+    // MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true) {
+        }
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+        }
+        dismiss(animated: true) {
+        }
+    }
 }

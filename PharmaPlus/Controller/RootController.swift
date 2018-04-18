@@ -30,6 +30,9 @@ class RootController: UIViewController , CLLocationManagerDelegate{
             print(exists)
         }
         // END
+        
+
+        // LOCALIZATION
         print("CLLocationManager.locationServicesEnabled()")
         print(CLLocationManager.locationServicesEnabled())
         print(CLLocationManager.authorizationStatus().rawValue)
