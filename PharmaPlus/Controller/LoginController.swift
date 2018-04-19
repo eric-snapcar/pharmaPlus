@@ -11,6 +11,11 @@ import FirebaseStorage
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
     fileprivate var imagePicker = UIImagePickerController()
+    fileprivate var email : String? {
+        get{
+            return emailTextField?.text
+        }
+    }
     // MARK: @IBOutle
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -34,14 +39,17 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
-            saveImage(filepath: "test", image: image)
-            print("Save image")
+            addCarteVitale(email: email, image: image)
         }
         dismiss(animated: true) {
         }
     }
     // MARK: private
-    func addCarteVitale( email : String, image : UIImage ){
+    func addCarteVitale( email : String?, image : UIImage ){
+        let carteVitaleRef = FirebaseService.reference().child("carte_vitale").childByAutoId()
+        let imageStoragePath = "carte_vitale/" + carteVitaleRef.key
+        saveImage(filepath: imageStoragePath, image: image)
+        carteVitaleRef.setValue(["email":email,"file_path":imageStoragePath])
     }
     func saveImage( filepath: String, image : UIImage ){
         var data = Data()
@@ -50,7 +58,7 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         metadata.contentType = "image/jpeg"
         let storage = Storage.storage()
         let storageRef = storage.reference()
-        let imageStorageRef = storageRef.child("image")
+        let imageStorageRef = storageRef.child(filepath)
         imageStorageRef.putData(data, metadata: metadata) { (metaData, error) in
             print(metaData)
             print(error)
