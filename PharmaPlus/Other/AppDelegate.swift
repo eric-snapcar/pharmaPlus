@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             locationManager.startMonitoringSignificantLocationChanges()
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.distanceFilter = 500
+            print("test")
         }
         if launchOptions?[UIApplicationLaunchOptionsKey.location] != nil {
             FirebaseService.reference().testLocationWakeup()

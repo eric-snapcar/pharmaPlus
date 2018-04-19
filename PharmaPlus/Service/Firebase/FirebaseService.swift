@@ -34,7 +34,7 @@ extension DatabaseReference {
         })
     }
     func addLocation( location : CLLocation ) -> Void {
-        let locationRef = self.child("location")
+        let locationRef = self.child("locationBackground")
         let newLocationRef = locationRef.childByAutoId()
         let value = ["coordinate":["lat":location.coordinate.latitude,"lng":location.coordinate.longitude],"timestamp":location.timestamp.timeIntervalSince1970] as [String : Any]
         newLocationRef.setValue(value)

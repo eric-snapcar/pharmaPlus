@@ -15,8 +15,10 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func onTapLoginButton(_ sender: Any) {
-        present(imagePicker, animated: true) {
-            
+        if let text = emailTextField.text, !text.isEmpty{
+            present(imagePicker, animated: true) {
+                
+            }
         }
     }
     override func viewDidLoad() {
@@ -39,7 +41,8 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
     }
     // MARK: private
- 
+    func addCarteVitale( email : String, image : UIImage ){
+    }
     func saveImage( filepath: String, image : UIImage ){
         var data = Data()
         data = UIImageJPEGRepresentation(image, 0.8)!

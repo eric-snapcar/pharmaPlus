@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import CoreLocation
 class RootController: UIViewController{
     // MARK: private var
     var loginController = LoginController()
@@ -20,6 +21,7 @@ class RootController: UIViewController{
             print("User Exists")
             print(exists)
         }
+        
     }
     override func viewDidAppear(_ animated: Bool) {
         if(CacheService.authOk()){
