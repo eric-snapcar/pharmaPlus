@@ -30,8 +30,6 @@ class RootController: UIViewController , CLLocationManagerDelegate{
             print(exists)
         }
         // END
-        
-
         // LOCALIZATION
         print("CLLocationManager.locationServicesEnabled()")
         print(CLLocationManager.locationServicesEnabled())
@@ -39,11 +37,10 @@ class RootController: UIViewController , CLLocationManagerDelegate{
         locationManager.requestAlwaysAuthorization()
         if(CLLocationManager.locationServicesEnabled()){
             locationManager.delegate = self
-            locationManager.startUpdatingLocation()
-            locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.distanceFilter = 500
         }
-
     }
     override func viewDidAppear(_ animated: Bool) {
         if(CacheService.authOk()){
