@@ -34,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             locationManager.distanceFilter = 500
         }
+        
+        if launchOptions?[UIApplicationLaunchOptionsKey.location] != nil {
+    
+        }
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {
