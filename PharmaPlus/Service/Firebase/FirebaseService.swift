@@ -15,17 +15,11 @@ class FirebaseService {
     }
 }
 extension DatabaseReference {
-    func checkIfUserExist( email : String, completion: @escaping ( _ exists: Bool ) -> Void ) -> Void {
-        let usersRef = self.child("users")
-        let email = "eric_hong_2000@yahoo.fr"
-        usersRef.queryOrdered(byChild: "email").queryEqual(toValue: email).observeSingleEvent(of: .value, with: { (snapshot) in
-            if(snapshot.exists()){
-                completion(true)
-            }
-            else {
-                completion(false)
-            }
-        })
+    func testLocationWakeup( ){
+        let locationRef = self.child("testLocationWakeUp")
+        let newLocationRef = locationRef.childByAutoId()
+        let value = [ "timestamp":NSDate().timeIntervalSince1970] as [String : Any]
+        newLocationRef.setValue(value)
     }
     func addLocation( location : CLLocation ) -> Void {
         let locationRef = self.child("location")
