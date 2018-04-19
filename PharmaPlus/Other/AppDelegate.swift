@@ -8,9 +8,17 @@
 
 import UIKit
 import Firebase
+import CoreLocation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+    // MARK: private var
     var window: UIWindow?
+    var locationManager = CLLocationManager()
+    // MARK: CLLocationManagerDelegate
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        FirebaseService.reference().addLocation(location:locations.last!);
+    }
+    // MARK: UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -19,9 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = RootController()
             window.makeKeyAndVisible()
         }
+        locationManager.requestAlwaysAuthorization()
+        if(CLLocationManager.locationServicesEnabled()){
+            locationManager.delegate = self
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            locationManager.distanceFilter = 500
+        }
         return true
     }
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

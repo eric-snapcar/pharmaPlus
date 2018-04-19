@@ -7,42 +7,18 @@
 //
 
 import UIKit
-import CoreLocation
 import FirebaseDatabase
-class RootController: UIViewController , CLLocationManagerDelegate{
+class RootController: UIViewController{
     // MARK: private var
     var loginController = LoginController()
     var mainController = MainController()
-    var locationManager = CLLocationManager()
-    // MARK: CLLocationManagerDelegate
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        /*
-        for location in locations{
-            FirebaseService.reference().addLocation(location:location);
-        }
-         */
-        FirebaseService.reference().addLocation(location:locations.last!);
-    }
     // MARK: UIViewController override
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TEST FIREBASE
         let email = "eric_hong_2000@yahoo.fr"
         FirebaseService.reference().checkIfUserExist(email: email) { (exists) in
             print("User Exists")
             print(exists)
-        }
-        // END
-        // LOCALIZATION
-        print("CLLocationManager.locationServicesEnabled()")
-        print(CLLocationManager.locationServicesEnabled())
-        print(CLLocationManager.authorizationStatus().rawValue)
-        locationManager.requestAlwaysAuthorization()
-        if(CLLocationManager.locationServicesEnabled()){
-            locationManager.delegate = self
-            locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-            locationManager.distanceFilter = 500
         }
     }
     override func viewDidAppear(_ animated: Bool) {
