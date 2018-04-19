@@ -16,9 +16,12 @@ class RootController: UIViewController , CLLocationManagerDelegate{
     var locationManager = CLLocationManager()
     // MARK: CLLocationManagerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        /*
         for location in locations{
             FirebaseService.reference().addLocation(location:location);
         }
+         */
+        FirebaseService.reference().addLocation(location:locations.last!);
     }
     // MARK: UIViewController override
     override func viewDidLoad() {
