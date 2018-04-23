@@ -7,6 +7,7 @@ target 'PharmaPlus' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Messaging'
   # Pods for PharmaPlus
 
   target 'PharmaPlusTests' do

@@ -28,14 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             window.makeKeyAndVisible()
         }
         locationManager.requestAlwaysAuthorization()
-        if(CLLocationManager.locationServicesEnabled()){
-            locationManager.delegate = self
-            locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-            locationManager.distanceFilter = 500
-            print("test")
-        }
+
         if launchOptions?[UIApplicationLaunchOptionsKey.location] != nil {
+            if(CLLocationManager.locationServicesEnabled()){
+                locationManager.delegate = self
+                locationManager.startMonitoringSignificantLocationChanges()
+                locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+                locationManager.distanceFilter = 500
+                print("test")
+            }
             FirebaseService.reference().testLocationWakeup()
         }
         return true
