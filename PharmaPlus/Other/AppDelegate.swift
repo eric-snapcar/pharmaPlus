@@ -8,9 +8,10 @@
 
 import UIKit
 import Firebase
+import FirebaseMessaging
 import CoreLocation
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, MessagingDelegate {
     // MARK: private var
     var window: UIWindow?
     var locationManager = CLLocationManager()
@@ -39,6 +40,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             }
             FirebaseService.reference().testLocationWakeup()
         }
+        
+ // TEST
+        let settings: UIUserNotificationSettings =
+            UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+        application.registerUserNotificationSettings(settings)
+        application.registerForRemoteNotifications()
+        let token = Messaging.messaging().fcmToken
+        print("FCM token: \(token ?? "")")
+        Messaging.messaging().delegate = self
         return true
     }
     func applicationWillResignActive(_ application: UIApplication) {
@@ -62,7 +72,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String){
+        print("Token BIs")
+        print(fcmToken)
+        
+    }
+    func messaging(_ messaging: Messaging, didRefreshRegistrationToken fcmToken: String) {
+        print("Token")
+        print(fcmToken)
+    }
 }
 
