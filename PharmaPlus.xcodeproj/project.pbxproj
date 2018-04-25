@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		03D897F6B9E07359C304A9EF /* Pods-PharmaPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharmaPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-PharmaPlus/Pods-PharmaPlus.release.xcconfig"; sourceTree = "<group>"; };
+		074231A020909E0B009B2DC0 /* PharmaPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PharmaPlus.entitlements; sourceTree = "<group>"; };
 		079C5A79208E02F700B9CB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07C54E1020758A0300D60EE9 /* PharmaPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharmaPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C54E1320758A0300D60EE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		07C54E1220758A0300D60EE9 /* PharmaPlus */ = {
 			isa = PBXGroup;
 			children = (
+				074231A020909E0B009B2DC0 /* PharmaPlus.entitlements */,
 				07F5F1182083B3B300902DEC /* Service */,
 				07C54E4420758D8000D60EE9 /* Controller */,
 				07C54E4320758D6B00D60EE9 /* Other */,
@@ -307,6 +309,11 @@
 					07C54E0F20758A0300D60EE9 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					07C54E2320758A0400D60EE9 = {
 						CreatedOnToolsVersion = 9.2;
@@ -687,6 +694,7 @@
 			baseConfigurationReference = E6AD48016DA48DA7CA618002 /* Pods-PharmaPlus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PharmaPlus/PharmaPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S9CCRYGREW;
 				INFOPLIST_FILE = PharmaPlus/Info.plist;
@@ -703,6 +711,7 @@
 			baseConfigurationReference = 03D897F6B9E07359C304A9EF /* Pods-PharmaPlus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PharmaPlus/PharmaPlus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S9CCRYGREW;
 				INFOPLIST_FILE = PharmaPlus/Info.plist;

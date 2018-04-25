@@ -47,7 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
         let token = Messaging.messaging().fcmToken
-        print("FCM token: \(token ?? "")")
+        //print("FCM token: \(token ?? "")")
+        print(token)
         Messaging.messaging().delegate = self
         return true
     }
