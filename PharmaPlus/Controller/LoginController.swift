@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseCore
+
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
     fileprivate var imagePicker = UIImagePickerController()
@@ -19,7 +21,6 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     // MARK: @IBOutle
     @IBOutlet weak var testButton: UIButton!
     @IBAction func testButtonTapped(_ sender: Any) {
-        print("Test")
         testButtonTapped()
     }
     @IBOutlet weak var emailTextField: UITextField!
@@ -39,6 +40,8 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     }
     // MARK: UIImagePickerControllerDelegate
     func testButtonTapped() {
+                print("Test")
+        // var functions = Functions.functions()
         /*
         functions.httpsCallable("addMessage").call(["text": inputField.text]) { (result, error) in
             if let error = error as NSError? {
