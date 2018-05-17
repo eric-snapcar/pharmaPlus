@@ -40,6 +40,23 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         imagePicker.allowsEditing = true
     }
     // MARK: UIImagePickerControllerDelegate
+    func testButtonTapped() {
+        /*
+        functions.httpsCallable("addMessage").call(["text": inputField.text]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                }
+                // ...
+            }
+            if let text = (result?.data as? [String: Any])?["text"] as? String {
+                self.resultField.text = text
+            }
+        }
+        */
+    }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true) {
         }
@@ -52,6 +69,7 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
     }
     // MARK: private
+    
     func addCarteVitale( email : String?, image : UIImage ){
         let carteVitaleRef = FirebaseService.reference().child("carte_vitale").childByAutoId()
         let imageStoragePath = "carte_vitale/" + carteVitaleRef.key
