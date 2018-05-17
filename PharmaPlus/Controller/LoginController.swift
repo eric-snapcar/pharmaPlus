@@ -17,6 +17,10 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
     }
     // MARK: @IBOutle
+    @IBOutlet weak var testButton: UIButton!
+    @IBAction func testButtonTapped(_ sender: Any) {
+        print("Test")
+    }
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBAction func onTapLoginButton(_ sender: Any) {
@@ -26,6 +30,9 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
             }
         }
     }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.sourceType = .camera

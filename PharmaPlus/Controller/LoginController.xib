@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="emailTextField" destination="TGa-3O-Ccs" id="UGs-bY-8Po"/>
                 <outlet property="loginButton" destination="Aeo-XL-qST" id="F2r-Rs-0G0"/>
+                <outlet property="testButton" destination="U1z-SM-daP" id="6FU-5R-TfW"/>
                 <outlet property="view" destination="iN0-l3-epB" id="r05-PC-SCQ"/>
             </connections>
         </placeholder>
@@ -42,6 +43,14 @@
                     <state key="normal" title="Log In"/>
                     <connections>
                         <action selector="onTapLoginButton:" destination="-1" eventType="touchUpInside" id="RNn-U0-gSk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1z-SM-daP">
+                    <rect key="frame" x="172" y="219" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Test"/>
+                    <connections>
+                        <action selector="testButtonTapped:" destination="-1" eventType="touchUpInside" id="BVU-Gd-D6S"/>
                     </connections>
                 </button>
             </subviews>
