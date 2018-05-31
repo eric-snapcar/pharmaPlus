@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseStorage
 import FirebaseCore
+import FirebaseDatabase
 
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
@@ -75,7 +76,7 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         let carteVitaleRef = FirebaseService.reference().child("carte_vitale").childByAutoId()
         let imageStoragePath = "carte_vitale/" + carteVitaleRef.key
         saveImage(filepath: imageStoragePath, image: image)
-        carteVitaleRef.setValue(["email":email,"file_path":imageStoragePath])
+        carteVitaleRef.setValue(["email":email,"file_path":imageStoragePath,"timestamp":ServerValue.timestamp()])
     }
     func saveImage( filepath: String, image : UIImage ){
         var data = Data()

@@ -24,7 +24,7 @@ class RootController: UIViewController{
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        if(CacheService.authOk()){
+        if(UserDefaultsService.authOk()){
             self.present(mainController, animated: false) {
             }
         }else{

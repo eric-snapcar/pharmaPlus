@@ -8,8 +8,8 @@
 
 import Foundation
 
-class CacheService {
-    static var singleton = CacheService()
+class UserDefaultsService {
+    static var singleton = UserDefaultsService()
     var userDefaults = UserDefaults.standard
     var carteVitaleId: String? {
         get {
