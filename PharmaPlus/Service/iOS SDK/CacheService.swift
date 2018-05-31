@@ -7,7 +7,19 @@
 //
 
 import Foundation
+
 class CacheService {
+    static var singleton = CacheService()
+    var userDefaults = UserDefaults.standard
+    var carteVitaleId: String? {
+        get {
+            return userDefaults.string(forKey: "carteVitaleId")
+        }
+        set(value) {
+            userDefaults.setValue(value, forKey: "carteVitaleId")
+            userDefaults.synchronize()
+        }
+    }
     class func authOk() -> Bool{
         return false;
     }
