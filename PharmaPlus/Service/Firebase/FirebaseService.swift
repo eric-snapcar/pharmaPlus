@@ -8,13 +8,18 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 import CoreLocation
 class FirebaseService {
     class func reference() -> DatabaseReference{
         return Database.database().reference();
     }
     class func signIn(email:String,password:String, completion: @escaping ( _ user : User, _ error : NSError) -> Void ){
-        
+        Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (user, error) in
+            print(user)
+            print(error)
+            // completion(user,error);
+        }
     }
 }
 extension DatabaseReference {
