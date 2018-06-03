@@ -11,6 +11,7 @@ import FirebaseStorage
 import FirebaseCore
 import FirebaseDatabase
 
+
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
     fileprivate var imagePicker = UIImagePickerController()
@@ -58,6 +59,9 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
             }
         }
         */
+        // Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (user, error) in
+            // ...
+        }
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true) {
