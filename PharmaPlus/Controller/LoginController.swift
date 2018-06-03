@@ -29,7 +29,7 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     @IBAction func onTapLoginButton(_ sender: Any) {
         if let text = emailTextField.text, !text.isEmpty{
             present(imagePicker, animated: true) {
-                
+
             }
         }
     }
@@ -71,7 +71,7 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
     }
     // MARK: private
-    
+
     func addCarteVitale( email : String?, image : UIImage ){
         let carteVitaleRef = FirebaseService.reference().child("carte_vitale").childByAutoId()
         let imageStoragePath = "carte_vitale/" + carteVitaleRef.key
@@ -91,5 +91,5 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
             print(error)
         }
     }
- 
+
 }
