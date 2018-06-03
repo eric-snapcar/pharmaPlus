@@ -9,7 +9,7 @@ import FirebaseCore
 import FirebaseAuth
 import Foundation
 class User : NSObject {
-    init( firebaseUser : FirebaseAuth.User){
+    init( firebaseUser : FirebaseAuth.User?){
         
     }
 }
