@@ -13,6 +13,9 @@ class FirebaseService {
     class func reference() -> DatabaseReference{
         return Database.database().reference();
     }
+    class func signIn(email:String,password:String, completion: @escaping ( _ user : User, _ error : NSError) -> Void ){
+        
+    }
 }
 extension DatabaseReference {
     func testLocationWakeup( ){
@@ -21,6 +24,7 @@ extension DatabaseReference {
         let value = [ "timestamp":NSDate().timeIntervalSince1970] as [String : Any]
         newLocationRef.setValue(value)
     }
+    
     func checkIfUserExist( email : String, completion: @escaping ( _ exists: Bool ) -> Void ) -> Void {
         let usersRef = self.child("users")
         let email = "eric_hong_2000@yahoo.fr"
