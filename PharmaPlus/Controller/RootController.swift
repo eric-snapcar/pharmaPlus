@@ -21,7 +21,9 @@ class RootController: UIViewController{
             print("User Exists")
             print(exists)
         }
-        
+        FirebaseService.observeAuth { (user) in
+            print(user)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
         if(UserDefaultsService.authOk()){
