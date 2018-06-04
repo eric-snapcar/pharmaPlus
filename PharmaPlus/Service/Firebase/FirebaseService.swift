@@ -19,6 +19,12 @@ class FirebaseService {
             completion(User(firebaseUser:firebaseUser),error)
         }
     }
+    class func observeAuth(){
+        let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            print(auth)
+            print(user)
+        }
+    }
 }
 extension DatabaseReference {
     func testLocationWakeup( ){
