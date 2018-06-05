@@ -18,11 +18,11 @@ class RootController: UIViewController{
         super.viewDidLoad()
         FirebaseService.observeAuth { (user) in
             if(user != nil){
-                self.present(self.mainController, animated: false, completion: {
+                self.show(viewController:self.mainController, animated: false, completion: {
                     
                 })
             }else {
-                self.present(self.loginController, animated: false, completion: {
+                self.show(viewController:self.loginController, animated: false, completion: {
                     
                 })
             }
