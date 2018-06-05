@@ -1,3 +1,4 @@
+
 //
 //  MainController.swift
 //  PharmaPlus
@@ -7,8 +8,17 @@
 //
 
 import Foundation
-
+import FirebaseAuth
 import UIKit
 class MainController : UIViewController {
     
+    @IBAction func logOutButtonTapped(_ sender: Any) {
+        print("Log Out")
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
 }
