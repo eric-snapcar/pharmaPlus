@@ -108,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0783F91D20C6B311006992DF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0783F91B20C6AFCC006992DF /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		07A90D2C20C49F7800E207BF /* Object */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +149,7 @@
 		07C54E1220758A0300D60EE9 /* PharmaPlus */ = {
 			isa = PBXGroup;
 			children = (
+				0783F91D20C6B311006992DF /* Extension */,
 				07A90D2C20C49F7800E207BF /* Object */,
 				074231A020909E0B009B2DC0 /* PharmaPlus.entitlements */,
 				07F5F1182083B3B300902DEC /* Service */,
@@ -189,7 +198,6 @@
 				07F5F1102083AA6800902DEC /* LoginController.xib */,
 				07F5F1122083AF3300902DEC /* MainController.swift */,
 				07F5F1142083AF4100902DEC /* MainController.xib */,
-				0783F91B20C6AFCC006992DF /* UIViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
