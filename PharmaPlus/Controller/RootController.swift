@@ -16,23 +16,20 @@ class RootController: UIViewController{
     // MARK: UIViewController override
     override func viewDidLoad() {
         super.viewDidLoad()
-        let email = "eric_hong_2000@yahoo.fr"
-        FirebaseService.reference().checkIfUserExist(email: email) { (exists) in
-            print("User Exists")
-            print(exists)
-        }
         FirebaseService.observeAuth { (user) in
-            print(user)
+            if(user != nil){
+                self.present(self.mainController, animated: false, completion: {
+                    
+                })
+            }else {
+                self.present(self.loginController, animated: false, completion: {
+                    
+                })
+            }
         }
     }
     override func viewDidAppear(_ animated: Bool) {
-        if(UserDefaultsService.authOk()){
-            self.present(mainController, animated: false) {
-            }
-        }else{
-            self.present(loginController, animated: false) {
-            }
-        }
+ 
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
