@@ -42,7 +42,6 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
     }
     // MARK: UIImagePickerControllerDelegate
     func testButtonTapped() {
-                print("Test")
         // var functions = Functions.functions()
         /*
         functions.httpsCallable("addMessage").call(["text": inputField.text]) { (result, error) in

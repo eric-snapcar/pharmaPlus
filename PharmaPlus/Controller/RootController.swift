@@ -18,10 +18,10 @@ class RootController: UIViewController{
         super.viewDidLoad()
         FirebaseService.observeAuth { (user) in
             if let user = user{
-                // TEST
-                FirebaseService.createUser(userId: user.id, completion: { (user, error) in
-                    
-                })
+//                // TEST
+//                FirebaseService.createUser(userId: user.id, completion: { (user, error) in
+//                    
+//                })
                 self.show(viewController:self.mainController, animated: false, completion: {
                     
                 })

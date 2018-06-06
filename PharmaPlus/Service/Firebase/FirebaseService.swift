@@ -23,7 +23,7 @@ class FirebaseService {
                 completion(User(firebaseUser:firebaseUser),nil)
             }
             else {
-                completion(nil,NSError(domain:"PharmaPlus",code:500,userInfo:["description":"firebaseUser nil"]))
+                completion(nil,nil)
             }
         }
     }
