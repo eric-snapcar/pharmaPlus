@@ -9,7 +9,8 @@ import FirebaseCore
 import FirebaseAuth
 import Foundation
 class User : NSObject {
-    init( firebaseUser : FirebaseAuth.User?){
-        
+    var id : String
+    init( firebaseUser : FirebaseAuth.User){
+        self.id = firebaseUser.uid
     }
 }

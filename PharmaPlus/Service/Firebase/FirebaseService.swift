@@ -16,15 +16,24 @@ class FirebaseService {
     }
     class func signIn(email:String,password:String, completion: @escaping ( _ user : User?, _ error : Error?) -> Void ){
         Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (firebaseUser, error) in
-            completion(User(firebaseUser:firebaseUser),error)
+            if let error = error {
+                completion(nil,error)
+            }
+            else if let firebaseUser = firebaseUser{
+                completion(User(firebaseUser:firebaseUser),nil)
+            }
+            else {
+                completion(nil,NSError(domain:"PharmaPlus",code:500,userInfo:["description":"firebaseUser nil"]))
+            }
         }
     }
     class func observeAuth(completion: @escaping ( _ user : User? ) -> Void ){
         let handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if(auth.currentUser == nil){
+            if let currentUser = auth.currentUser{
+                completion(User(firebaseUser:currentUser));
+            }
+            else  {
                 completion(nil)
-            }else {
-                completion(User(firebaseUser:auth.currentUser));
             }
         }
     }
