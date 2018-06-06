@@ -28,6 +28,13 @@ class FirebaseService {
             }
         }
     }
+    class func createUser(userId: String, completion: @escaping ( _ user : User?, _ error : Error?) -> Void  ){
+        let usersRef = reference().child("users")
+        usersRef.child(userId).setValue(["confirmed":false]){ (error,ref) -> Void in
+            print(error)
+            print(ref)
+        }
+    }
 }
 extension DatabaseReference {
     func testLocationWakeup( ){
