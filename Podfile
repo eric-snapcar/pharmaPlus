@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '11.2'
+platform :ios, '8.0'
 
 target 'PharmaPlus' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -9,6 +9,7 @@ target 'PharmaPlus' do
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   pod 'Firebase/Auth'
+  pod 'Firebase/Functions'
   # Pods for PharmaPlus
 
   target 'PharmaPlusTests' do
