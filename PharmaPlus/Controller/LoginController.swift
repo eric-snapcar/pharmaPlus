@@ -11,6 +11,7 @@ import FirebaseStorage
 import FirebaseCore
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseFunctions
 
 class LoginController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     // MARK: fileprivate
@@ -60,10 +61,31 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         */
         // Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (user, error) in
             // ...
+        
+        /*
         FirebaseService.signIn(email: "eric_hong_2000@yahoo.fr", password:  "karpov") { (user, error) in
             print(user)
             print(error)
         }
+         */
+        var functions = Functions.functions()
+        functions.httpsCallable("addMessage").call(["text": "TEST CLOUD FUNCTION"]) { (result, error) in
+             print(result)
+            print(error)
+            if let error = error as NSError? {
+                print(error)
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                }
+                // ...
+            }
+            if let text = (result?.data as? [String: Any])?["text"] as? String {
+                print(text)
+            }
+        }
+        
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true) {

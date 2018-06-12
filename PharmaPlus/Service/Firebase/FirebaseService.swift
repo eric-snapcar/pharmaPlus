@@ -15,11 +15,11 @@ class FirebaseService {
         return Database.database().reference();
     }
     class func signIn(email:String,password:String, completion: @escaping ( _ user : User?, _ error : Error?) -> Void ){
-        Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (firebaseUser, error) in
+        Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (auth, error) in
             if let error = error {
                 completion(nil,error)
             }
-            else if let firebaseUser = firebaseUser{
+            else if let firebaseUser = auth?.user{
                 completion(User(firebaseUser:firebaseUser),nil)
             }
             else {

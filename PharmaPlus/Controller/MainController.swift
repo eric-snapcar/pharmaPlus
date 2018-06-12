@@ -11,7 +11,6 @@ import Foundation
 import FirebaseAuth
 import UIKit
 class MainController : UIViewController {
-    
     @IBAction func logOutButtonTapped(_ sender: Any) {
         print("Log Out")
         let firebaseAuth = Auth.auth()
