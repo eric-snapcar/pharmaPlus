@@ -69,23 +69,10 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         }
          */
         var functions = Functions.functions()
-        functions.httpsCallable("addMessage").call(["text": "TEST CLOUD FUNCTION"]) { (result, error) in
-             print(result)
-            print(error)
-            if let error = error as NSError? {
-                print(error)
-                if error.domain == FunctionsErrorDomain {
-                    let code = FunctionsErrorCode(rawValue: error.code)
-                    let message = error.localizedDescription
-                    let details = error.userInfo[FunctionsErrorDetailsKey]
-                }
-                // ...
-            }
-            if let text = (result?.data as? [String: Any])?["text"] as? String {
-                print(text)
-            }
+        functions.httpsCallable("addMessage").call(["text": "TEST TEST"]) { (result, error) in
+             print(result?.data)
+            print(error.debugDescription)
         }
-        
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true) {
