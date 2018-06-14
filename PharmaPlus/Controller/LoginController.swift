@@ -68,9 +68,16 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
             print(error)
         }
          */
+        /*
         var functions = Functions.functions()
         functions.httpsCallable("addMessage").call(["text": "TEST TEST"]) { (result, error) in
              print(result?.data)
+            print(error.debugDescription)
+        }
+         */
+        var functions = Functions.functions()
+        functions.httpsCallable("createUser").call(["id": "testId","email":"testEmail"]) { (result, error) in
+            print(result?.data)
             print(error.debugDescription)
         }
     }
