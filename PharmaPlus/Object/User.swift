@@ -10,7 +10,9 @@ import FirebaseAuth
 import Foundation
 class User : NSObject {
     var id : String
+    var email : String?
     init( firebaseUser : FirebaseAuth.User){
         self.id = firebaseUser.uid
+        self.email = firebaseUser.email
     }
 }

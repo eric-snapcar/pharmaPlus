@@ -62,12 +62,21 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         // Auth.auth().signIn(withEmail: "eric_hong_2000@yahoo.fr", password: "karpov") { (user, error) in
             // ...
         
-        /*
+
         FirebaseService.signIn(email: "eric_hong_2000@yahoo.fr", password:  "karpov") { (user, error) in
-            print(user)
-            print(error)
+            var functions = Functions.functions()
+            functions.httpsCallable("getUser").call(["id": user?.id]) { (result, error) in
+                print(result?.data)
+                print(error.debugDescription)
+            }
+            /*
+            var functions = Functions.functions()
+            functions.httpsCallable("createUser").call(["id":  user?.id,"email": user?.email]) { (result, error) in
+                print(result?.data)
+                print(error.debugDescription)
+            }
+             */
         }
-         */
         /*
         var functions = Functions.functions()
         functions.httpsCallable("addMessage").call(["text": "TEST TEST"]) { (result, error) in
@@ -75,11 +84,13 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
             print(error.debugDescription)
         }
          */
+        /*
         var functions = Functions.functions()
         functions.httpsCallable("createUser").call(["id": "testId","email":"testEmail"]) { (result, error) in
             print(result?.data)
             print(error.debugDescription)
         }
+         */
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true) {
