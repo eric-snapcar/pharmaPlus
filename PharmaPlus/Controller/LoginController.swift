@@ -64,18 +64,26 @@ class LoginController : UIViewController, UIImagePickerControllerDelegate, UINav
         
 
         FirebaseService.signIn(email: "eric_hong_2000@yahoo.fr", password:  "karpov") { (user, error) in
+            /*
             var functions = Functions.functions()
             functions.httpsCallable("getUser").call(["id": user?.id]) { (result, error) in
+                print(result)
                 print(result?.data)
+                 print(error)
                 print(error.debugDescription)
             }
+ */
+            FirebaseService.getUser(userId: (user?.id)!, completion: { (user, error) in
+                
+            })
             /*
+ 
             var functions = Functions.functions()
             functions.httpsCallable("createUser").call(["id":  user?.id,"email": user?.email]) { (result, error) in
                 print(result?.data)
                 print(error.debugDescription)
             }
-             */
+            */
         }
         /*
         var functions = Functions.functions()

@@ -44,6 +44,14 @@ class FirebaseService {
             print(ref)
         }
     }
+    class func getUser(userId: String, completion: @escaping ( _ user : User?, _ error : Error?) -> Void  ){
+        let userRef = reference().child("users/"+userId)
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            print(snapshot.value)
+        }) { (error) in
+            print(error)
+        }
+    }
 }
 extension DatabaseReference {
     func testLocationWakeup( ){
